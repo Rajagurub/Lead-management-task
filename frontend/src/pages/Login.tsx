@@ -39,6 +39,15 @@ const Login=()=>{
       role: result.data.admin.role,
     })
   );
+  localStorage.setItem(
+  "user",
+  JSON.stringify({
+    token: result.data.token,
+    username: result.data.admin.name,
+    email: result.data.admin.email,
+    role: result.data.admin.role,
+  })
+);
         
     toast.success(
    result?.message|| "Login successfull!"
